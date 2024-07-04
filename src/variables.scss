@@ -1,0 +1,24 @@
+:root {
+  //Fonts
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("./assets/fonts/JetBrainsMono-VariableFont_wght.ttf")
+      format("truetype");
+  }
+
+  --font-normal: "JetBrains Mono", monospace;
+
+  // Colors
+  --color-almost-white: #e6e5ea;
+  --color-grey: #817d92;
+  --color-dark-grey: #24232c;
+  --color-very-dark-grey: #18171f;
+  --color-neon-green: #a4ffaf;
+  --color-red: #f64a4a;
+  --color-orange: #fb7c58;
+  --color-yellow: #f8cd65;
+
+  // Transitions
+
+  --transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,54 @@
+.selection {
+  &__container {
+    font-family: var(--font-normal);
+    text-align: left;
+    padding: 32px;
+
+    span {
+      margin-left: 10px;
+    }
+
+    label {
+      display: flex;
+      max-width: max-content;
+    }
+
+    // Removes default checkbox styles
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      margin: 0;
+    }
+
+    // Adds custom checkbox styles
+    input[type="checkbox"] {
+      color: transparent;
+      width: 20px;
+      height: 20px;
+      border-radius: 0;
+      display: grid;
+      place-content: center;
+    }
+
+    input[type="checkbox"]::before {
+      width: 20px;
+      height: 20px;
+      content: "";
+      box-shadow: var(--color-almost-white);
+      border: 2px solid var(--color-almost-white);
+      transition: var(--transition);
+    }
+
+    input[type="checkbox"]:checked::before {
+      height: 16px;
+      content: url("../../assets/images/icon-check.svg");
+      background-color: var(--color-neon-green);
+      border: 2px solid var(--color-neon-green);
+      transform: scale(1);
+      text-align: center;
+      padding-top: 4px;
+      transition: var(--transition);
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.slider {
+  &__container {
+    padding: 32px 32px 0 32px;
+
+    input[type="range"] {
+      height: 32px;
+    }
+
+    // Add custom styles for Chrome
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      input[type="range"] {
+        overflow: hidden;
+        width: 100%;
+        -webkit-appearance: none;
+        background-color: transparent;
+      }
+
+      input[type="range"]::-webkit-slider-runnable-track {
+        height: 8px;
+        -webkit-appearance: none;
+        background-color: var(--color-neon-green);
+        margin-top: -1px;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        cursor: ew-resize;
+        margin-top: -11px;
+        height: 28px;
+        width: 28px;
+        border-radius: 25px;
+        border: 2px solid var(--color-almost-white);
+        background-color: var(--color-almost-white);
+
+        &:active {
+          background-color: var(--color-very-dark-grey);
+          border: 2px solid var(--color-neon-green);
+        }
+      }
+    }
+
+    // Add custom styles for Firefox
+    input[type="range"]::-moz-range-progress {
+      background-color: var(--color-neon-green);
+      height: 8px;
+    }
+    input[type="range"]::-moz-range-track {
+      background-color: var(--color-very-dark-grey);
+      height: 8px;
+    }
+    input[type="range"]::-moz-range-thumb {
+      height: 28px;
+      width: 28px;
+      border-radius: 25px;
+      border: 2px solid var(--color-almost-white);
+      background-color: var(--color-almost-white);
+
+      &:active {
+        background-color: var(--color-very-dark-grey);
+        border: 2px solid var(--color-neon-green);
+      }
+    }
+
+    // Internet Explorer
+    input[type="range"]::-ms-fill-lower {
+      background-color: var(--color-neon-green);
+      height: 8px;
+    }
+    input[type="range"]::-ms-fill-upper {
+      background-color: var(--color-very-dark-grey);
+      height: 8px;
+    }
+    input[type="range"]::-ms-thumb {
+      height: 28px;
+      width: 28px;
+      border-radius: 25px;
+      border: 2px solid var(--color-almost-white);
+      background-color: var(--color-almost-white);
+
+      &:active {
+        background-color: var(--color-very-dark-grey);
+        border: 2px solid var(--color-neon-green);
+      }
+    }
+  }
+
+  &__details {
+    font-family: var(--font-normal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-size: 32px;
+      color: var(--color-neon-green);
+    }
+  }
+}
